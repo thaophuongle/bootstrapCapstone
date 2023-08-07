@@ -1,0 +1,59 @@
+/* GLOBAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: 'Jost', sans-serif;
+}
+
+.title {
+    text-align: center;
+}
+
+.title h6 {
+    text-transform: uppercase;
+    color: #f53626;
+    font-weight: 400;
+    font-size: 18px;
+
+}
+
+.title h3 {
+    font-weight: 700;
+}
+
+/* ADVERTISEMENT */
+.video-img {
+    border-radius: 10px;
+}
+
+/* BACK TO TOP */
+.backToTop {
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    line-height: 50px;
+    background-color: #189A46;
+    border-radius: 50%;
+    color: white;
+    font-size: 16px;
+
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+}
+
+.cd-top--is-visible {
+    /* back-to-top button visible */
+    visibility: visible;
+    opacity: 1;
+}
+
+.cd-top--fade-out {
+    /* reduce button opacity if user keeps scrolling */
+    opacity: .5;
+}
