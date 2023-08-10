@@ -31,6 +31,137 @@ body {
     border-radius: 10px;
 }
 
+.video-icon {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+} 
+
+#small-dialog {
+    max-width: 750px;
+    margin: 40px auto;
+    position: relative;
+  }
+  div#small-dialog iframe {
+    width: 100%;
+    height: 420px;
+    display: block;
+    border-radius: 10px;
+  }
+  .mfp-close-btn-in .mfp-close {
+    color: #fff;
+  }
+  .mfp-close,
+  .mfp-close:active {
+    top: -40px;
+  }
+  
+  /**
+     * Fade-zoom animation for first dialog
+     */
+  /* start state */
+  .my-mfp-zoom-in .zoom-anim-dialog {
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+    transform: scale(0.8);
+  }
+  
+  /* animate in */
+  .my-mfp-zoom-in.mfp-ready .zoom-anim-dialog {
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+  /* animate out */
+  .my-mfp-zoom-in.mfp-removing .zoom-anim-dialog {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  
+  /* Dark overlay, start state */
+  .my-mfp-zoom-in.mfp-bg {
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+  }
+  
+  /* animate in */
+  .my-mfp-zoom-in.mfp-ready.mfp-bg {
+    opacity: 0.95;
+  }
+  
+  /* animate out */
+  .my-mfp-zoom-in.mfp-removing.mfp-bg {
+    opacity: 0;
+  }
+
+  /* TESTIMONIALS */
+  .testimonial {
+    background-color: rgba(147, 107, 232, 0.05);
+  }
+  
+/* UPDATED */
+.subcribeField button {
+    flex-basis: 27%;
+}
+.subcribeBtn {
+    padding: 12px 35px;
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 400;
+    border-radius: 10px;
+    background-color: #189A46;
+}
+
+/* FOOTER */
+footer {
+    background-color: black;
+}
+
+footer li {
+    font-size: 16px;
+    line-height: 28px;
+    color: #696969;
+    list-style: none;
+}
+
+footer li a {
+    text-decoration: none;
+    color: #696969;
+}
+
+footer li a:hover {
+    text-decoration: underline;
+    color: #fff;
+}
+
+.footer__title {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 25px;
+    line-height: 26px;
+}
+
+.fb,
+.twitter,
+.dribbble,
+.google {
+    display: inline;
+    margin: 5px;
+    font-size: 16px;
+}
+
+.socialIcon li a:hover {
+    text-decoration: none;
+}
+
+.copyright {
+    color: #696969;
+    font-size: 16px;
+    line-height: 28px;
+    font-weight: normal;
+}
+
 /* BACK TO TOP */
 .backToTop {
     height: 50px;
@@ -42,18 +173,18 @@ body {
     color: white;
     font-size: 16px;
 
-    position: absolute;
+    position: fixed;
     right: 30px;
     bottom: 30px;
 }
 
 .cd-top--is-visible {
     /* back-to-top button visible */
-    visibility: visible;
-    opacity: 1;
+    opacity: 0;
 }
 
 .cd-top--fade-out {
     /* reduce button opacity if user keeps scrolling */
-    opacity: .5;
+    opacity: 1;
+    visibility: visible;
 }
