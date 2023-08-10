@@ -35,6 +35,12 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    background: #fff;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    border-radius: 50%;
+    display: inline-block;
 } 
 
 #small-dialog {
@@ -97,19 +103,93 @@ body {
   /* TESTIMONIALS */
   .testimonial {
     background-color: rgba(147, 107, 232, 0.05);
+    text-align: left;
   }
+
+  .testimonial__detail {
+    display: block;
+    padding: 40px 30px;
+    background-color: white;
+    border: none;
+    box-shadow: 0 25px 98px 0 rgba(19, 19, 19, 0.03);
+    border-radius: 10px;
+  }
+
+  .testimonial blockquote {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    position: relative;
+    margin-bottom: 1.5em;
+  }
+
+  .testimonial q::before {
+    font-size: 50px;
+    color: #189A46;
+    line-height: .8;
+    font-weight: 600;
+    display: inline-block;
+  }
+
+  .happyClient {
+    display: flex;
+    text-align: center;
+  }
+
+  .clientImage img{
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+  }
+
+  .clientInfo {
+    margin: 0;
+    margin-left: 20px;
+    text-align: left;
+  }
+
+  .clientInfo h3 {
+    font-weight: 600;
+    font-size: 20px;
+  }
+
+  .clientInfo p {
+    color: #777;
+    font-size: 17px;
+    font-size: normal;
+    margin-top: 0;
+    text-align: left;
+    opacity: 0.8;
+  }
+
   
 /* UPDATED */
-.subcribeField button {
-    flex-basis: 27%;
+.subscribeField {
+  display: flex;
+  justify-content: space-between;
 }
-.subcribeBtn {
+
+.subscribeBtn {
     padding: 12px 35px;
     font-size: 18px;
+    height: 60px;
     line-height: 28px;
     font-weight: 400;
     border-radius: 10px;
     background-color: #189A46;
+    flex-basis: auto;
+}
+
+.subscribeInput {
+    font-size: 16px;
+    border-radius: 10px;
+    padding: 0 20px;
+    flex-basis: auto;
+    height: 60px;
+
+
 }
 
 /* FOOTER */
@@ -166,25 +246,25 @@ footer li a:hover {
 .backToTop {
     height: 50px;
     width: 50px;
+    display: block;
     text-align: center;
     line-height: 50px;
     background-color: #189A46;
     border-radius: 50%;
     color: white;
+    transition: all .2s;
     font-size: 16px;
+    visibility: hidden;
+    opacity: 0;
 
     position: fixed;
-    right: 30px;
-    bottom: 30px;
+    right: 15px;
+    bottom: 60px;
+    z-index: 99;
 }
 
 .cd-top--is-visible {
     /* back-to-top button visible */
-    opacity: 0;
-}
-
-.cd-top--fade-out {
-    /* reduce button opacity if user keeps scrolling */
     opacity: 1;
     visibility: visible;
 }
