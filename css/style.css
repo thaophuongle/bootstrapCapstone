@@ -53,6 +53,7 @@ p {
   background-color: transparent;
   padding: 0 20px;
   transition: all .2s linear;
+  width: 25px;
 
 }
 
@@ -232,15 +233,17 @@ color: #999; */
   color: white;
   background-color: var(--primary-color);
 }
-.navbar-toggler{
+
+.navbar-toggler {
   padding: 0;
 }
+
 .navbar-light .navbar-toggler {
   background-color: var(--primary-color);
 }
 
-.navbar-light .navbar-toggler-icon {
-  background-image: none;
+.navbar-light .navbar-toggler:focus {
+  outline: 2px solid black;
 }
 
 .navbar-light .navbar-toggler-icon::before {
@@ -249,11 +252,33 @@ color: #999; */
   font-size: 1.5rem;
   text-rendering: auto;
   color: #fff;
-  line-height: 30px;
+  line-height: 32px;
+  display: block;
 }
-.navbar-light .navbar-toggler-icon::before:focus{
+#navSpooch .navbar-toggler.collapsed .icon__close{
   display: none;
 }
+#navSpooch .navbar-toggler.collapsed .icon__expand{
+  display: block;
+} 
+#navSpooch .navbar-toggler .icon__close{
+  display: block;
+}
+#navSpooch .navbar-toggler .icon__expand{
+  display: none;
+}
+#navSpooch .navbar-toggler .icon__close::before {
+  content: "";
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  line-height: 32px;
+  color: #fff;
+}
+.navbar-light .navbar-toggler-icon {
+  background-image: none;
+}
+
 .pop-overlay:target {
   visibility: visible;
   opacity: 1;
@@ -331,17 +356,20 @@ font-weight: normal; */
 @media screen and (max-width:992px) {
   #switchButton {
     position: absolute;
-    right: 50px;
+    right: 75px;
     top: 32px;
   }
-  #navbarSpooch .navbar-nav a.nav-link{
+
+  #navbarSpooch .navbar-nav a.nav-link {
     text-align: center;
     padding: 6px 0;
   }
-  a.nav-link:hover::before{
+
+  a.nav-link:hover::before {
     width: 0;
   }
-  #navbarSpooch .HeaderSearch{
+
+  #navbarSpooch .HeaderSearch {
     padding: 20px 0;
   }
 }
