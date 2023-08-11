@@ -525,6 +525,9 @@ font-weight: normal; */
   #Spoochcarousel .text__right {
     left: 10%;
   }
+  #Spoochcarousel .carousel-caption{
+    left: 5%;
+  }
 }
 
 /* About Us */
