@@ -46,11 +46,14 @@ p {
 
 #myBody {
   background-color: white;
+  transition: all .2s linear;
 }
 
 #switchButton {
   background-color: transparent;
   padding: 0 20px;
+  transition: all .2s linear;
+
 }
 
 #switchButton:focus {
@@ -74,6 +77,7 @@ header {
   z-index: 1000;
   width: 100%;
   box-shadow: 0 3px 9px rgba(0, 0, 0, 0.05);
+  transition: all .2s linear;
 }
 
 #navSpooch .navbar-brand {
