@@ -99,7 +99,10 @@ header {
   color: #000;
 
 }
-
+#navbarSpooch .navbar-nav .close {
+  color: rgb(255, 255, 255);
+  font-size: 30px;
+}
 #navbarSpooch .nav-item {
   padding: 0 14px;
 }
@@ -515,6 +518,9 @@ font-weight: normal; */
     font-size: 50px;
     line-height: 55px;
   }
+  #Spoochcarousel .text__right {
+    left: 30%;
+  }
 }
 
 @media (max-width: 767.98px) {
@@ -907,6 +913,12 @@ font-weight: normal; */
   border: 1px solid #333;
   border-bottom: none;
   border-right: none;
+}
+.dark #navbarSpooch .dropdown-item {
+  background-color: transparent;
+}
+.dark #navbarSpooch .dropdown-item:hover{
+  color: var(--primary-color);
 }
 .dark #switchButton .fa-sun {
   display: block;
